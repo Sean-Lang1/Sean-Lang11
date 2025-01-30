@@ -31,11 +31,12 @@ Run the script:
 python lyrics_overlay.py
 The application will display the lyrics of the currently playing song in a transparent window.
 
-##🔮 Future Improvements
+## 🔮 Future Improvements
 Enhanced Synchronization: Improve the synchronization between the song playback and the lyrics display.
 Customization: Allow users to customize the appearance of the lyrics overlay, including font size, color, and position.
 Error Handling: Implement better error handling for scenarios where the song or lyrics cannot be retrieved.
-##📝 License
+
+## 📝 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ##🙏 Acknowledgments
