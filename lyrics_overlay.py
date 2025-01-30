@@ -6,20 +6,20 @@ import re
 import time
 
 # Set up Spotify API (replace with your own credentials)
-SPOTIPY_CLIENT_ID = "a8bba9debdc94fb7abdcdbd8886c0d4c"
-SPOTIPY_CLIENT_SECRET = "d0e2794c8bde4bdbaac34016165f242e"
-SPOTIPY_REDIRECT_URI = "http://localhost:8888/callback"
+# SPOTIPY_CLIENT_ID = "YOUR_SPOTIPY_CLIENT_ID"
+# SPOTIPY_CLIENT_SECRET = "YOUR_SPOTIPY_CLIENT_SECRET"
+# SPOTIPY_REDIRECT_URI = "http://localhost:8888/callback"
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
-    client_id=SPOTIPY_CLIENT_ID,
-    client_secret=SPOTIPY_CLIENT_SECRET,
-    redirect_uri=SPOTIPY_REDIRECT_URI,
+    client_id="YOUR_SPOTIPY_CLIENT_ID",  # Replace with your Spotify client ID
+    client_secret="YOUR_SPOTIPY_CLIENT_SECRET",  # Replace with your Spotify client secret
+    redirect_uri="http://localhost:8888/callback",
     scope="user-read-currently-playing"
 ))
 
 # Set up Genius API
-GENIUS_ACCESS_TOKEN = "J2JZss4eXJFWskLfAzHeiYgK0WA3fyg78lhIiP7xUEecdJQIPjHJFJnFFQCNk2wW"
-genius = lyricsgenius.Genius(GENIUS_ACCESS_TOKEN)
+# GENIUS_ACCESS_TOKEN = "YOUR_GENIUS_ACCESS_TOKEN"
+genius = lyricsgenius.Genius("YOUR_GENIUS_ACCESS_TOKEN")  # Replace with your Genius access token
 
 def get_spotify_song():
     """Fetches the currently playing song from Spotify API."""
@@ -78,6 +78,7 @@ def create_transparent_window():
 
 def update_lyrics(label, lyrics):
     """Updates the label with the next line of lyrics."""
+    # This code will cycle through the lyrics
     for line in lyrics:
         label.config(text=line)
         time.sleep(3)  # Adjust the duration each line is displayed
